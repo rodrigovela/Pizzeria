@@ -69,6 +69,10 @@ class QuesoViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         {
             selectedCheese = cheese[2]
         }
+        else if(row == 3)
+        {
+            selectedCheese = cheese[3]
+        }
         else
         {
             selectedCheese = cheese[0]
