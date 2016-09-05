@@ -9,7 +9,8 @@
 import WatchKit
 import Foundation
 
-
+var tamaño:String?
+var masa:String?
 class Cheese: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
@@ -17,6 +18,8 @@ class Cheese: WKInterfaceController {
         
         // Configure interface objects here.
         let c = context as! Pizza
+        tamaño = c.tamaño
+        masa = c.masa
         
     }
 
@@ -31,11 +34,19 @@ class Cheese: WKInterfaceController {
     }
 
     @IBAction func sinSelected() {
+        let pizza = Pizza(t: tamaño!,m: masa!, q: "sin queso")
+        pushControllerWithName("IngredientSelect", context: pizza)
     }
     @IBAction func chedSelected() {
+        let pizza = Pizza(t: tamaño!,m: masa!, q: "cheddar")
+        pushControllerWithName("IngredientSelect", context: pizza)
     }
     @IBAction func parSelected() {
+        let pizza = Pizza(t: tamaño!,m: masa!, q: "parmesano")
+        pushControllerWithName("IngredientSelect", context: pizza)
     }
     @IBAction func mozSelected() {
+        let pizza = Pizza(t: tamaño!,m: masa!, q: "mozarella")
+        pushControllerWithName("IngredientSelect", context: pizza)
     }
 }

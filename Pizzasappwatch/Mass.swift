@@ -32,7 +32,7 @@ class Mass: WKInterfaceController {
 
     @IBAction func bigSelected() {
         let pizza = Pizza(t: size!, m: "Gruesa")
-        pushControllerWithName("ChesseSelect", context: pizza)
+        pushControllerWithName("CheeseSelect", context: pizza)
     }
     
     @IBAction func thinSelected() {

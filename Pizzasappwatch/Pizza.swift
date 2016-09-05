@@ -12,6 +12,7 @@ class Pizza: NSObject {
     var tamaño: String?
     var masa: String?
     var queso: String?
+    var ingredientes:[String]?
     
     init(t:String) {
         self.tamaño = t
@@ -26,6 +27,13 @@ class Pizza: NSObject {
         self.tamaño = t
         self.masa = m
         self.queso = q
+    }
+    
+    init(t:String, m: String, q: String, i: [String]) {
+        self.tamaño = t
+        self.masa = m
+        self.queso = q
+        self.ingredientes = i
     }
 
 }

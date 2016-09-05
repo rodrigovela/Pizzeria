@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="711" y="345"/>
         </scene>
-        <!--ChesseSelect-->
+        <!--CheeseSelect-->
         <scene sceneID="0G4-hs-No4">
             <objects>
-                <controller identifier="ChesseSelect" id="ZuJ-q8-1vE" customClass="Cheese" customModule="Pizzasappwatch_Extension">
+                <controller identifier="CheeseSelect" id="ZuJ-q8-1vE" customClass="Cheese" customModule="Pizzasappwatch_Extension">
                     <items>
                         <label width="136" alignment="left" text="Queso" textAlignment="center" id="LwB-gi-ZFX"/>
                         <group width="1" height="165" alignment="left" layout="vertical" id="znn-j4-V9a">
@@ -141,14 +141,46 @@
                         <label width="136" alignment="left" text="Ingredientes" textAlignment="center" id="NiE-Xb-uCn"/>
                         <group width="1" height="342" alignment="left" layout="vertical" id="l1c-VK-RyJ">
                             <items>
-                                <switch width="1" alignment="left" value="YES" title="jamón" id="9Nn-jE-001"/>
-                                <switch width="1" alignment="left" value="YES" title="peperonni" id="0cZ-sp-tVV"/>
-                                <switch width="1" alignment="left" value="YES" title="pavo" id="cqb-dy-wHm"/>
-                                <switch width="1" alignment="left" value="YES" title="salchicha" id="zrR-Ej-TnF"/>
-                                <switch width="1" alignment="left" value="YES" title="cebolla" id="SrR-lQ-Q63"/>
-                                <switch width="1" alignment="left" value="YES" title="piña" id="Xpp-9s-mZx"/>
-                                <switch width="1" alignment="left" value="YES" title="pimiento" id="AK6-ed-YeW"/>
-                                <button width="1" alignment="left" title="Confirmar" id="qL7-OE-yBA"/>
+                                <switch width="1" alignment="left" title="jamón" id="9Nn-jE-001">
+                                    <connections>
+                                        <action selector="jamonSelection:" destination="Pt7-T6-yHr" id="9wV-t6-aaJ"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="left" title="peperonni" id="0cZ-sp-tVV">
+                                    <connections>
+                                        <action selector="peperonniSelection:" destination="Pt7-T6-yHr" id="XjM-1j-PHj"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="left" title="pavo" id="cqb-dy-wHm">
+                                    <connections>
+                                        <action selector="pavoSelection:" destination="Pt7-T6-yHr" id="bOQ-Ir-7xU"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="left" title="salchicha" id="zrR-Ej-TnF">
+                                    <connections>
+                                        <action selector="salchichaSelection:" destination="Pt7-T6-yHr" id="yKw-v0-ixD"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="left" title="cebolla" id="SrR-lQ-Q63">
+                                    <connections>
+                                        <action selector="cebollaSelection:" destination="Pt7-T6-yHr" id="ryg-2Y-jmG"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="left" title="piña" id="Xpp-9s-mZx">
+                                    <connections>
+                                        <action selector="piñaSelection:" destination="Pt7-T6-yHr" id="zVo-MX-Cle"/>
+                                    </connections>
+                                </switch>
+                                <switch width="1" alignment="left" title="pimiento" id="AK6-ed-YeW">
+                                    <connections>
+                                        <action selector="pimientoSelection:" destination="Pt7-T6-yHr" id="mBu-nm-EQT"/>
+                                    </connections>
+                                </switch>
+                                <button width="1" alignment="left" title="siguiente" id="qL7-OE-yBA">
+                                    <connections>
+                                        <action selector="confirm" destination="Pt7-T6-yHr" id="N2x-dv-1Nq"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
@@ -159,13 +191,43 @@
         <!--Order-->
         <scene sceneID="W2n-RT-sPi">
             <objects>
-                <controller identifier="Order" id="vek-bE-9tQ" customClass="Confirmation" customModule="Pizzas">
+                <controller identifier="Order" id="vek-bE-9tQ" customClass="Confirmation" customModule="Pizzasappwatch_Extension">
                     <items>
-                        <label alignment="left" text="Orden Confirmada" id="Zil-uq-ufQ"/>
+                        <label alignment="left" text="Confirmar Orden" id="Zil-uq-ufQ"/>
+                        <group width="1" height="124" alignment="left" layout="vertical" id="4Ek-j2-rzQ">
+                            <items>
+                                <label width="136" alignment="left" text="Tamaño" textAlignment="center" id="u62-np-F3l"/>
+                                <label width="135.5" alignment="left" text="Masa" textAlignment="center" id="HCQ-zd-hhb"/>
+                                <label width="134.5" alignment="left" text="Queso" textAlignment="center" id="exW-Yw-Taf"/>
+                                <label width="136" alignment="left" text="Ingredientes" textAlignment="center" numberOfLines="0" id="kQB-e9-cER"/>
+                                <button width="1" alignment="left" title="confirmar" id="ayK-3m-kPV">
+                                    <connections>
+                                        <segue destination="Rnz-wE-dBG" kind="modal" id="sfy-nh-DaS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
+                    <connections>
+                        <outlet property="cheeseLabel" destination="exW-Yw-Taf" id="8Rn-R5-mxu"/>
+                        <outlet property="ingredLabel" destination="kQB-e9-cER" id="f1d-VN-eMq"/>
+                        <outlet property="massLabel" destination="HCQ-zd-hhb" id="KQE-sL-D4n"/>
+                        <outlet property="sizeLabel" destination="u62-np-F3l" id="bO6-p0-UgW"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="1399" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pmo-zS-L7f">
+            <objects>
+                <controller id="Rnz-wE-dBG">
+                    <items>
+                        <label width="136" height="122.5" alignment="left" text="Felicidades Tu orden esta en proceso!" textAlignment="left" numberOfLines="4" id="BoF-8C-zBc"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1619" y="345"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

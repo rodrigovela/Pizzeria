@@ -12,10 +12,33 @@ import Foundation
 
 class Confirmation: WKInterfaceController {
 
+    @IBOutlet var ingredLabel: WKInterfaceLabel!
+    @IBOutlet var cheeseLabel: WKInterfaceLabel!
+    @IBOutlet var massLabel: WKInterfaceLabel!
+    @IBOutlet var sizeLabel: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        let c = context as! Pizza
+        
+        sizeLabel.setText(c.tamaño)
+        massLabel.setText(c.masa)
+        cheeseLabel.setText(c.queso)
+        
+        var str:String? = nil
+        for element in c.ingredientes!{
+            
+            if((str) != nil){
+                str = str! + ", " + element
+            }
+            else
+            {
+                str = element
+            }
+            
+        }
+        ingredLabel.setText(str!)
     }
 
     override func willActivate() {
