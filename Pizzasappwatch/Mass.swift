@@ -9,13 +9,14 @@
 import WatchKit
 import Foundation
 
+var size:String? = nil
 
 class Mass: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         let c = context as! Pizza
-        
+        size = c.tamaño
         // Configure interface objects here.
     }
 
@@ -29,4 +30,18 @@ class Mass: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func bigSelected() {
+        let pizza = Pizza(t: size!, m: "Gruesa")
+        pushControllerWithName("ChesseSelect", context: pizza)
+    }
+    
+    @IBAction func thinSelected() {
+        let pizza = Pizza(t: size!, m: "Delgada")
+        pushControllerWithName("CheeseSelect", context: pizza)
+    }
+    
+    @IBAction func crunchySelected() {
+        let pizza = Pizza(t: size!, m: "Crujiente")
+        pushControllerWithName("CheeseSelect", context: pizza)
+    }
 }

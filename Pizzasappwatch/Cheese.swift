@@ -16,6 +16,8 @@ class Cheese: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        let c = context as! Pizza
+        
     }
 
     override func willActivate() {
@@ -28,4 +30,12 @@ class Cheese: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func sinSelected() {
+    }
+    @IBAction func chedSelected() {
+    }
+    @IBAction func parSelected() {
+    }
+    @IBAction func mozSelected() {
+    }
 }

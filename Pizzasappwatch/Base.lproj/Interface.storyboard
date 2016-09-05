@@ -41,7 +41,7 @@
         <!--SizeSelect-->
         <scene sceneID="8U4-am-C5O">
             <objects>
-                <controller identifier="SizeSelect" id="DTi-Sx-Fdx" customClass="Size" customModule="Pizzas">
+                <controller identifier="SizeSelect" id="DTi-Sx-Fdx" customClass="Size" customModule="Pizzasappwatch_Extension">
                     <items>
                         <label width="135.5" height="23.5" alignment="left" text="Tamaño" textAlignment="center" id="Dh7-a8-iIb"/>
                         <group width="1" height="120" alignment="left" layout="vertical" id="8FS-Gs-lCP">
@@ -71,14 +71,26 @@
         <!--MassSelect-->
         <scene sceneID="ccR-iD-7BE">
             <objects>
-                <controller identifier="MassSelect" id="akz-Yj-jr5" customClass="Mass" customModule="Pizzas">
+                <controller identifier="MassSelect" id="akz-Yj-jr5" customClass="Mass" customModule="Pizzasappwatch_Extension">
                     <items>
                         <label width="136" height="17.5" alignment="left" text="Masa" textAlignment="center" id="IkD-a8-rDJ"/>
                         <group width="1" height="126" alignment="left" layout="vertical" id="qPl-BS-kgf">
                             <items>
-                                <button width="1" alignment="left" title="Delgada" id="KEm-mh-KvB"/>
-                                <button width="1" alignment="left" title="Crujiente" id="Nop-X7-cXU"/>
-                                <button width="1" alignment="left" title="Gruesa" id="8ZY-kB-IUl"/>
+                                <button width="1" alignment="left" title="Delgada" id="KEm-mh-KvB">
+                                    <connections>
+                                        <action selector="thinSelected" destination="akz-Yj-jr5" id="RFH-UA-pdL"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Crujiente" id="Nop-X7-cXU">
+                                    <connections>
+                                        <action selector="crunchySelected" destination="akz-Yj-jr5" id="5cs-sw-Zar"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Gruesa" id="8ZY-kB-IUl">
+                                    <connections>
+                                        <action selector="bigSelected" destination="akz-Yj-jr5" id="PrL-2z-9cU"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
@@ -89,15 +101,31 @@
         <!--ChesseSelect-->
         <scene sceneID="0G4-hs-No4">
             <objects>
-                <controller identifier="ChesseSelect" id="ZuJ-q8-1vE" customClass="Cheese" customModule="Pizzas">
+                <controller identifier="ChesseSelect" id="ZuJ-q8-1vE" customClass="Cheese" customModule="Pizzasappwatch_Extension">
                     <items>
                         <label width="136" alignment="left" text="Queso" textAlignment="center" id="LwB-gi-ZFX"/>
                         <group width="1" height="165" alignment="left" layout="vertical" id="znn-j4-V9a">
                             <items>
-                                <button width="1" alignment="left" title="mozarella" id="vzW-o9-50F"/>
-                                <button width="1" alignment="left" title="parmezano" id="TEI-BZ-umA"/>
-                                <button width="1" alignment="left" title="cheddar" id="Hpm-As-9zW"/>
-                                <button width="1" alignment="left" title="sin queso" id="x24-g9-bD6"/>
+                                <button width="1" alignment="left" title="mozarella" id="vzW-o9-50F">
+                                    <connections>
+                                        <action selector="mozSelected" destination="ZuJ-q8-1vE" id="HyG-9o-4c4"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="parmezano" id="TEI-BZ-umA">
+                                    <connections>
+                                        <action selector="parSelected" destination="ZuJ-q8-1vE" id="IRI-zm-EX9"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="cheddar" id="Hpm-As-9zW">
+                                    <connections>
+                                        <action selector="chedSelected" destination="ZuJ-q8-1vE" id="KCM-ZZ-Bti"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="sin queso" id="x24-g9-bD6">
+                                    <connections>
+                                        <action selector="sinSelected" destination="ZuJ-q8-1vE" id="CpJ-87-FQA"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
@@ -108,7 +136,7 @@
         <!--IngredientSelect-->
         <scene sceneID="RhZ-YO-Hjh">
             <objects>
-                <controller identifier="IngredientSelect" id="Pt7-T6-yHr" customClass="Ingredient" customModule="Pizzas">
+                <controller identifier="IngredientSelect" id="Pt7-T6-yHr" customClass="Ingredient" customModule="Pizzasappwatch_Extension">
                     <items>
                         <label width="136" alignment="left" text="Ingredientes" textAlignment="center" id="NiE-Xb-uCn"/>
                         <group width="1" height="342" alignment="left" layout="vertical" id="l1c-VK-RyJ">
