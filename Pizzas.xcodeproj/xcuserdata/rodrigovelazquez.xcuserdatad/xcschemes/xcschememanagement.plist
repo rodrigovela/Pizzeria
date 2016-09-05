@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Pizzasappwatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pizzasappwatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>FA5E0E551D677F6D004A3EAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAD863081D7DD1D900A3138E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
