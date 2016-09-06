@@ -41,7 +41,7 @@ class Ingredient: WKInterfaceController {
         if(ingredientes?.count > 0){
             
             let pizza = Pizza(t: tamaño!, m: masa!, q: queso!, i: ingredientes!)
-            presentControllerWithName("Order", context: pizza)
+            pushControllerWithName("Order", context: pizza)
             
         }
         

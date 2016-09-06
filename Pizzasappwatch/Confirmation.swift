@@ -16,11 +16,20 @@ class Confirmation: WKInterfaceController {
     @IBOutlet var cheeseLabel: WKInterfaceLabel!
     @IBOutlet var massLabel: WKInterfaceLabel!
     @IBOutlet var sizeLabel: WKInterfaceLabel!
+    
+    var flag:Bool = true
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
         let c = context as! Pizza
+        
+        if(c.tamaño == nil || c.masa == nil || c.queso == nil || c.ingredientes == nil){
+            flag = false
+        }
+        else{
+            flag = true
+        }
         
         sizeLabel.setText(c.tamaño)
         massLabel.setText(c.masa)
@@ -39,6 +48,8 @@ class Confirmation: WKInterfaceController {
             
         }
         ingredLabel.setText(str!)
+        
+        
     }
 
     override func willActivate() {
@@ -51,4 +62,10 @@ class Confirmation: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func confirm() {
+        if(flag){
+        let value = true
+        pushControllerWithName("Confirm", context: value)
+        }
+    }
 }

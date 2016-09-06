@@ -10,7 +10,7 @@
             <objects>
                 <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Pizzasappwatch" customModuleProvider="target">
                     <items>
-                        <label width="134.5" height="23.5" alignment="left" text="Arma tu pizza" textAlignment="center" id="o1Q-hv-yyQ"/>
+                        <label width="134.5" height="23.5" alignment="center" text="Arma tu pizza" textAlignment="center" id="o1Q-hv-yyQ"/>
                         <button width="1" alignment="left" title="Empezar" id="HEr-fp-KiJ">
                             <connections>
                                 <action selector="startPizza" destination="AgC-eL-Hgc" id="QoJ-RW-bFo"/>
@@ -43,7 +43,7 @@
             <objects>
                 <controller identifier="SizeSelect" id="DTi-Sx-Fdx" customClass="Size" customModule="Pizzasappwatch_Extension">
                     <items>
-                        <label width="135.5" height="23.5" alignment="left" text="Tamaño" textAlignment="center" id="Dh7-a8-iIb"/>
+                        <label width="135.5" height="23.5" alignment="center" text="Tamaño" textAlignment="center" id="Dh7-a8-iIb"/>
                         <group width="1" height="120" alignment="left" layout="vertical" id="8FS-Gs-lCP">
                             <items>
                                 <button width="1" alignment="left" title="Chica" id="nt9-iT-2e4">
@@ -73,7 +73,7 @@
             <objects>
                 <controller identifier="MassSelect" id="akz-Yj-jr5" customClass="Mass" customModule="Pizzasappwatch_Extension">
                     <items>
-                        <label width="136" height="17.5" alignment="left" text="Masa" textAlignment="center" id="IkD-a8-rDJ"/>
+                        <label width="136" height="17.5" alignment="center" text="Masa" textAlignment="center" id="IkD-a8-rDJ"/>
                         <group width="1" height="126" alignment="left" layout="vertical" id="qPl-BS-kgf">
                             <items>
                                 <button width="1" alignment="left" title="Delgada" id="KEm-mh-KvB">
@@ -103,7 +103,7 @@
             <objects>
                 <controller identifier="CheeseSelect" id="ZuJ-q8-1vE" customClass="Cheese" customModule="Pizzasappwatch_Extension">
                     <items>
-                        <label width="136" alignment="left" text="Queso" textAlignment="center" id="LwB-gi-ZFX"/>
+                        <label width="136" alignment="center" text="Queso" textAlignment="center" id="LwB-gi-ZFX"/>
                         <group width="1" height="165" alignment="left" layout="vertical" id="znn-j4-V9a">
                             <items>
                                 <button width="1" alignment="left" title="mozarella" id="vzW-o9-50F">
@@ -138,7 +138,7 @@
             <objects>
                 <controller identifier="IngredientSelect" id="Pt7-T6-yHr" customClass="Ingredient" customModule="Pizzasappwatch_Extension">
                     <items>
-                        <label width="136" alignment="left" text="Ingredientes" textAlignment="center" id="NiE-Xb-uCn"/>
+                        <label width="136" alignment="center" text="Ingredientes" textAlignment="center" id="NiE-Xb-uCn"/>
                         <group width="1" height="342" alignment="left" layout="vertical" id="l1c-VK-RyJ">
                             <items>
                                 <switch width="1" alignment="left" title="jamón" id="9Nn-jE-001">
@@ -193,16 +193,17 @@
             <objects>
                 <controller identifier="Order" id="vek-bE-9tQ" customClass="Confirmation" customModule="Pizzasappwatch_Extension">
                     <items>
-                        <label alignment="left" text="Confirmar Orden" id="Zil-uq-ufQ"/>
-                        <group width="1" height="124" alignment="left" layout="vertical" id="4Ek-j2-rzQ">
+                        <label alignment="center" text="Confirmar Orden" id="Zil-uq-ufQ"/>
+                        <group width="1" height="134" alignment="left" layout="vertical" id="4Ek-j2-rzQ">
                             <items>
-                                <label width="136" alignment="left" text="Tamaño" textAlignment="center" id="u62-np-F3l"/>
-                                <label width="135.5" alignment="left" text="Masa" textAlignment="center" id="HCQ-zd-hhb"/>
-                                <label width="134.5" alignment="left" text="Queso" textAlignment="center" id="exW-Yw-Taf"/>
-                                <label width="136" alignment="left" text="Ingredientes" textAlignment="center" numberOfLines="0" id="kQB-e9-cER"/>
+                                <label width="136" alignment="center" text="Tamaño" textAlignment="center" id="u62-np-F3l"/>
+                                <label width="135.5" alignment="center" text="Masa" textAlignment="center" id="HCQ-zd-hhb"/>
+                                <label width="134.5" alignment="center" text="Queso" textAlignment="center" id="exW-Yw-Taf"/>
+                                <label width="136" alignment="center" text="Ingredientes" textAlignment="center" numberOfLines="0" id="kQB-e9-cER"/>
                                 <button width="1" alignment="left" title="confirmar" id="ayK-3m-kPV">
                                     <connections>
-                                        <segue destination="Rnz-wE-dBG" kind="modal" id="sfy-nh-DaS"/>
+                                        <action selector="confirm" destination="vek-bE-9tQ" id="PNB-Eu-tgR"/>
+                                        <segue destination="PFN-fB-gwP" kind="modal" id="LOY-RC-0Nx"/>
                                     </connections>
                                 </button>
                             </items>
@@ -216,18 +217,19 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1399" y="345"/>
+            <point key="canvasLocation" x="1399" y="348.25"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="pmo-zS-L7f">
+        <!--Confirm-->
+        <scene sceneID="goh-4p-fb5">
             <objects>
-                <controller id="Rnz-wE-dBG">
+                <controller identifier="Confirm" alwaysBounce="YES" id="PFN-fB-gwP">
                     <items>
-                        <label width="136" height="122.5" alignment="left" text="Felicidades Tu orden esta en proceso!" textAlignment="left" numberOfLines="4" id="BoF-8C-zBc"/>
+                        <label width="136" alignment="center" text="FELICIDADES!!" textAlignment="center" id="nWm-oV-gAh"/>
+                        <label alignment="center" text="Tu orden esta en proceso!!" numberOfLines="3" id="SZ8-Aa-MV4"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1619" y="345"/>
+            <point key="canvasLocation" x="1638" y="345"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
