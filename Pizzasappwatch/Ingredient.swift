@@ -48,86 +48,101 @@ class Ingredient: WKInterfaceController {
     }
     
     @IBAction func jamonSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("jamón")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("jamón")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("jamón")!)!)
             }
-        }
+        
     }
     
     @IBAction func peperonniSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("peperonni")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("peperonni")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("peperonni")!)!)
             }
-        }
+        
     }
     
     @IBAction func pavoSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("pavo")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("pavo")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("pavo")!)!)
             }
-        }
+        
     }
     
     @IBAction func salchichaSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("salchicha")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("salchicha")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("salchicha")!)!)
             }
-        }
+        
     }
     
     @IBAction func cebollaSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("cebolla")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("cebolla")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("cebolla")!)!)
             }
-        }    }
+        
+    }
     
     @IBAction func piñaSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("piña")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("piña")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("piña")!)!)
             }
-        }
+        
     }
     
     @IBAction func pimientoSelection(value: Bool) {
-        if(ingredientes?.count < 5)
-        {
+        
             if(value){
-                ingredientes?.append("pimiento")
+                if(ingredientes?.count < 5)
+                {
+                    ingredientes?.append("pimiento")
+                }
             }
             else{
                 ingredientes?.removeAtIndex((ingredientes?.indexOf("pimiento")!)!)
             }
-        }
+        
     }
     
 }

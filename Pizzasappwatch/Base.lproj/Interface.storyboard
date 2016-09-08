@@ -194,18 +194,18 @@
                 <controller identifier="Order" id="vek-bE-9tQ" customClass="Confirmation" customModule="Pizzasappwatch_Extension">
                     <items>
                         <label alignment="center" text="Confirmar Orden" id="Zil-uq-ufQ"/>
-                        <group width="1" height="134" alignment="left" layout="vertical" id="4Ek-j2-rzQ">
+                        <button width="1" alignment="left" title="confirmar" id="ayK-3m-kPV">
+                            <connections>
+                                <action selector="confirm" destination="vek-bE-9tQ" id="PNB-Eu-tgR"/>
+                                <segue destination="PFN-fB-gwP" kind="modal" id="LOY-RC-0Nx"/>
+                            </connections>
+                        </button>
+                        <group width="1" height="152" alignment="left" layout="vertical" id="4Ek-j2-rzQ">
                             <items>
                                 <label width="136" alignment="center" text="Tamaño" textAlignment="center" id="u62-np-F3l"/>
                                 <label width="135.5" alignment="center" text="Masa" textAlignment="center" id="HCQ-zd-hhb"/>
                                 <label width="134.5" alignment="center" text="Queso" textAlignment="center" id="exW-Yw-Taf"/>
-                                <label width="136" alignment="center" text="Ingredientes" textAlignment="center" numberOfLines="0" id="kQB-e9-cER"/>
-                                <button width="1" alignment="left" title="confirmar" id="ayK-3m-kPV">
-                                    <connections>
-                                        <action selector="confirm" destination="vek-bE-9tQ" id="PNB-Eu-tgR"/>
-                                        <segue destination="PFN-fB-gwP" kind="modal" id="LOY-RC-0Nx"/>
-                                    </connections>
-                                </button>
+                                <label width="136" height="68.5" alignment="center" text="Ingredientes" textAlignment="center" numberOfLines="0" id="kQB-e9-cER"/>
                             </items>
                         </group>
                     </items>
@@ -217,7 +217,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1399" y="348.25"/>
+            <point key="canvasLocation" x="1399" y="357"/>
         </scene>
         <!--Confirm-->
         <scene sceneID="goh-4p-fb5">
